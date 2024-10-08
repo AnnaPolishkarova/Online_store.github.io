@@ -9,91 +9,92 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Интернет-магазин электроники</title>
 </head>
-<body>
-    <header>
-        <table width="100%">
-            <tr>
-                <td>
-                    <img src="img/logo.jpg" alt="Логотип" width="150" height="150"><br>
-                </td>
-                <td>
-                    <strong>Интернет-магазин электроники</strong><br>
-                </td>
-                <td>
-                    <label>
-                        <input type="text" size="100" placeholder="Поиск товаров...">
-                    </label>
-                </td>
-            </tr>
-        </table>
-    </header>
-    <main>
-        <h1>Добро пожаловать в наш интернет-магазин!</h1>
-        <nav>
-            <h3>Текущие акции</h3>
-            <ul>
-                <li><a href="#current1">Скидки на технику Xiaomi</a></li>
-                <li><a href="#current2">Новинки</a></li>
-                <li><a href="#current3">Распродажа</a></li>
-            </ul>
-            <h3>Категории товаров</h3>
-            <ol>
-                <li><a href="#laptops">Ноутбуки</a></li>
-                <li><a href="#smartphones">Смартфоны</a></li>
-                <li><a href="#computers">Компьютеры</a></li>
-                <li><a href="#monitors">Мониторы</a></li>
-            </ol>
-        </nav>
-        <section id="news">
-            <h4>Что у нас нового</h4>
-            <p>Подробности тут...</p>
-            <p>А еще вот тут...</p>
-        </section>
-        <section id="overviws">
-            <h4>Обзоры</h4>
-            <p>Лучшие смартфоны - 2024</p>
-        </section>
-        <section>
-            <aside>
-            <h5><i>Псевдокод Корзины Покупок</i></h5>
-            <pre>
-            ---------
-           /         \
-         ---------------
-         \\\\|||||||////
-          \\\\|||||////
-           \\\\|||////
-            ---------
-            </pre>
-            </aside>
-        </section>
-        <section>
-            <h5><i>Snippet</i></h5>
-            <pre><code>
-    def get_hello_world() -> str:
-        return 'Hello world!'
-            </code></pre>
-        </section>
-        <blockquote>
-            <p>Лотерея - наиболее точный способ учета количества оптимистов</p>
-            <cite>Михаил Жванецкий<sub>1934-2020</sub></cite>
-        </blockquote>
-    </main>
-
-
-
-    <footer>
-        <h3>Полезные ссылки</h3>
-        <ul>
-            <li><a href="#contacts">Контакты</a></li>
-                <ul>
-                    <li><a href="#address">Адрес</a></li>
-                    <li><a href="#phone">Телефон</a></li>
-                    <li><a href="#email">Email</a></li>
-                </ul>
-            <li><a href="#help">Помощь</a></li>
-            <li><a href="#about">О нас</a></li>
+<body class="page">
+<div id="uppage"></div>
+<header class="header">
+    <div class="header__container">
+        <div class="header__logo">
+            <img src="img/logo.jpg" alt="Логотип" width="150" height="150">
+        </div>
+        <div class="header__title">
+            <strong>Интернет-магазин электроники</strong>
+        </div>
+        <div class="header__search">
+            <label class="header__search-label">
+                <input type="text" class="header__search-input" placeholder="Поиск товаров...">
+            </label>
+        </div>
+    </div>
+</header>
+<main class="main-content">
+    <h1 class="main-content__title">Интернет-магазин "Какое-то супер-название"</h1>
+    <nav class="navigation">
+        <h3 class="navigation__title">Текущие акции</h3>
+        <ul class="navigation__list">
+            <li class="navigation__item">
+                <a href="#current1" class="navigation__promotionLink">
+                    <img src="img/Xiaomi.jpg" alt="Xiaomi"> Скидки на технику Xiaomi
+                </a>
+            </li>
+            <li class="navigation__item">
+                <a href="#current2" class="navigation__promotionLink">
+                    <img src="img/NEW.jpg" alt="Новинки"> Новинки
+                </a>
+            </li>
+            <li class="navigation__item">
+                <a href="#current3" class="navigation__promotionLink">
+                    <img src="img/SALE.jpg" alt="Распродажа"> Распродажа
+                </a>
+            </li>
         </ul>
-    </footer>
+        <h3 class="navigation__title">Категории товаров</h3>
+        <ol class="navigation__list navigation__list--ordered">
+            <li class="navigation__item">
+                <a href="#computers" class="navigation__categoryLink">
+                    <img src="img/PC.jpg" alt="Компьютеры"> Компьютеры
+                </a>
+            </li>
+            <li class="navigation__item">
+                <a href="#laptops" class="navigation__categoryLink">
+                    <img src="img/laptop.jpg" alt="Ноутбуки"> Ноутбуки
+                </a>
+            </li>
+            <li class="navigation__item">
+                <a href="#smartphones" class="navigation__categoryLink">
+                    <img src="img/smartphone.jpg" alt="Смартфоны"> Смартфоны
+                </a>
+            </li>
+            <li class="navigation__item">
+                <a href="#tablets" class="navigation__categoryLink">
+                    <img src="img/tablet.jpg" alt="Планшеты"> Планшеты
+                </a>
+            </li>
+        </ol>
+    </nav>
+    <section class="section" id="news">
+        <h4 class="section__title">Что у нас нового</h4>
+        <p class="section__text">Подробности тут...</p>
+        <p class="section__text">А еще вот тут...</p>
+    </section>
+    <section class="section" id="overviews">
+        <h4 class="section__title">Обзоры</h4>
+        <p class="section__text">Лучшие смартфоны - 2024</p>
+    </section>
+
+</main>
+<footer class="footer">
+    <h3 class="footer__title">Полезные ссылки</h3>
+    <ul class="footer__list">
+        <li class="footer__item"><a href="#contacts" class="footer__link">Контакты</a></li>
+        <ul class="footer__sublist">
+            <li class="footer__subitem"><a href="#address" class="footer__link">Адрес</a></li>
+            <li class="footer__subitem"><a href="#phone" class="footer__link">Телефон</a></li>
+            <li class="footer__subitem"><a href="#email" class="footer__link">Email</a></li>
+        </ul>
+        <li class="footer__item"><a href="#help" class="footer__link">Помощь</a></li>
+        <li class="footer__item"><a href="#about" class="footer__link">О нас</a></li>
+    </ul>
+    <div class="page__link"><a href="#uppage">Наверх</a></div>
+</footer>
 </body>
-</html> 
+</html>

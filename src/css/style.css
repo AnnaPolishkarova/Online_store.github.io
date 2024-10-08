@@ -1,3 +1,75 @@
-p{
-    color: #0000FF;
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #D9D0F0;
+    font-family: "Calibri Light", serif;
+}
+.main-content__title {
+    font-size: 50px;
+    font-style: oblique;
+    color: rebeccapurple;
+    background-color: #C6B9DA;
+    margin: 20px;
+    line-height: 1.5;
+    font-weight: 900;
+    text-align: center;
+    background-image: linear-gradient(to right, #C6B9DA, #D9D0F0);
+}
+.navigation__title {
+    font-size: 30px;
+    color: rebeccapurple;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.navigation__promotionLink img{
+    vertical-align: middle;
+    width: 220px;
+    height: 120px;
+    margin: 10px;
+    box-shadow: darkmagenta 0px 0px 15px;
+}
+.navigation__categoryLink img{
+    width: 250px;
+    height: 200px;
+    vertical-align: middle;
+    margin: 15px;
+}
+.section__title {
+    font-size: 20px;
+    color: rebeccapurple;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.section__text {
+    text-indent: 40px;
+}
+.footer__title {
+    font-size: 20px;
+    color: rebeccapurple;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    line-height: 2.5;
+}
+.footer__item {
+    text-indent: 40px;
+}
+.footer__subitem {
+    text-indent: 60px;
+}
+.page__link{
+    font-size: 15px;
+    color: rebeccapurple;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 2.5;
+    font-weight: 600;
+    text-align: center;
 }
