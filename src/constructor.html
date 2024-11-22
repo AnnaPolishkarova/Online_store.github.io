@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Акции интернет-магазина электроники">
-    <meta name="keywords" content="акции, скидки, электроника, купить">
-    <meta name="author" content="Anna Polishkarova">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
-    <script src="js/loadTimeStats.js" defer></script>
+    <link rel="stylesheet" href="css/styleConstructor.css">
     <script src="js/locationMenu.js" defer></script>
-    <title>Новости</title>
+    <title>Список задач</title>
 </head>
 <body class="page">
 <div id="uppage"></div>
@@ -25,7 +21,7 @@
             </div>
             <div class="header__search">
                 <label class="header__search-label">
-                  <input type="text" class="header__search-input" placeholder="Поиск товаров...">
+                    <input type="text" class="header__search-input" placeholder="Поиск товаров...">
                 </label>
             </div>
             <div class="header__contact">
@@ -51,37 +47,29 @@
     </div>
 </header>
 <main class="main-content">
-    <h3 class="main-content__title">Что у нас нового</h3>
-    <section class="section" id="news">
-        <h4 class="section__title">Статьи в СМИ</h4>
-        <p class="section__text">Подробности тут...</p>
-        <p class="section__text">А еще вот тут...</p>
-    </section>
-    <section class="section" id="reviews">
-        <h4 class="section__title">Обзоры</h4>
-        <p class="section__text">Подробности тут...</p>
-        <p class="section__text">А еще вот тут...</p>
-    </section>
-</main>
-<footer class="footer">
-    <div class="footer__links-container">
-        <div class="footer__item">
-            <h4 class="footer__sub-title">О нас</h4>
-            <a href="#about" class="footer__link">История</a>
-        </div>
-        <div class="footer__item">
-            <h4 class="footer__sub-title">Покупателям</h4>
-            <a href="#help" class="footer__link">Помощь</a>
-        </div>
-        <div class="footer__contacts">
-            <h4 class="footer__sub-title">Контакты</h4>
-            <ul class="footer__sublist">
-                <li class="footer__subitem"><a href="#address" class="footer__link">Адрес</a></li>
-                <li class="footer__subitem"><a href="#phone" class="footer__link">Телефон</a></li>
-                <li class="footer__subitem"><a href="#email" class="footer__link">Email</a></li>
-            </ul>
-        </div>
+    <h3 class="main-content__title">Нужно сделать</h3>
+    <form id="task-form">
+        <label>
+            Название задачи:
+            <input type="text" id="task-title" required>
+        </label>
+        <label>
+            Дата выполнения:
+            <input type="date" id="task-date" required>
+        </label>
+        <button type="submit">Добавить задачу</button>
+    </form>
+    <div class="button-container">
+        <button id="save-settings">Сохранить параметры</button>
+        <button id="load-settings">Загрузить параметры</button>
     </div>
+    <div id="tasks-container">
+        <h2>Мои задачи</h2>
+        <ul id="tasks-list"></ul>
+    </div>
+    <script src="js/scriptConstructor.js"></script>
+</main>
+<footer>
     <div class="page__link"><a href="#uppage">Наверх</a></div>
 </footer>
 </body>

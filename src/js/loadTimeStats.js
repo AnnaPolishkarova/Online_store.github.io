@@ -8,9 +8,6 @@
         loadTimeElement.style.marginBottom = '20px';
         loadTimeElement.textContent = `Page load time is: ${loadTime.toFixed(3)} seconds`;
 
-        // const footer = document.querySelector('footer');
-        // footer.appendChild(loadTimeElement);
-
         const dateElement = document.getElementById('current-date');
         dateElement.insertAdjacentElement('afterend', loadTimeElement);
     });
