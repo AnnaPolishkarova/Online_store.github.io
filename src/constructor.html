@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleConstructor.css">
+    <script src="js/locationMenu.js" defer></script>
+    <title>Список задач</title>
+</head>
+<body class="page">
+<div id="uppage"></div>
+<header class="header">
+    <div class="header__container">
+        <div class="header__top">
+            <div class="header__logo">
+                <img src="img/logo.jpg" alt="Логотип" width="150" height="150">
+            </div>
+            <div class="header__title">
+                <strong>Интернет-магазин электроники</strong>
+            </div>
+            <div class="header__search">
+                <label class="header__search-label">
+                    <input type="text" class="header__search-input" placeholder="Поиск товаров...">
+                </label>
+            </div>
+            <div class="header__contact">
+                <div class="header__city">Санкт-Петербург</div>
+                <div class="header__phone">+7 (812) 123-45-67</div>
+            </div>
+            <div class="header__private">
+                <a href="private.html">Войти в личный кабинет</a>
+            </div>
+            <div class="header__busket">
+                <a href="busket.html">Корзина</a>
+            </div>
+        </div>
+        <nav class="header__menu">
+            <ul class="menu">
+                <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
+                <li class="menu__item"><a href="catalog.html" class="menu__link">Каталог</a></li>
+                <li class="menu__item"><a href="promotions.html" class="menu__link">Акции</a></li>
+                <li class="menu__item"><a href="news.html" class="menu__link">Новости</a></li>
+                <li class="menu__item"><a href="constructor.html" class="menu__link">Список задач</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="main-content">
+    <h3 class="main-content__title">Нужно сделать</h3>
+    <form id="task-form">
+        <label>
+            Название задачи:
+            <input type="text" id="task-title" required>
+        </label>
+        <label>
+            Дата выполнения:
+            <input type="date" id="task-date" required>
+        </label>
+        <button type="submit">Добавить задачу</button>
+    </form>
+    <div class="button-container">
+        <button id="save-settings">Сохранить параметры</button>
+        <button id="load-settings">Загрузить параметры</button>
+    </div>
+    <div id="tasks-container">
+        <h2>Мои задачи</h2>
+        <ul id="tasks-list"></ul>
+    </div>
+    <script src="js/scriptConstructor.js"></script>
+</main>
+<footer>
+    <div class="page__link"><a href="#uppage">Наверх</a></div>
+</footer>
+</body>
+</html>
