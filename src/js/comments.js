@@ -27,34 +27,68 @@ document.addEventListener("DOMContentLoaded", () => {
         comments.forEach((comment) => {
             const commentElement = document.createElement("div");
             commentElement.className = "comment";
-            commentElement.innerHTML = `
-                <h4>${comment.name} (${comment.email})</h4>
-                <p>${comment.body}</p>
-            `;
+
+            const titleElement = document.createElement("h4");
+            titleElement.textContent = `${comment.name} (${comment.email})`;
+
+            const bodyElement = document.createElement("p");
+            bodyElement.textContent = comment.body;
+
+            commentElement.appendChild(titleElement);
+            commentElement.appendChild(bodyElement);
+
             commentsList.appendChild(commentElement);
         });
     };
 
-    const fetchComments = async () => {
+    // const fetchComments = async () => {
+    //     showPreloader();
+    //     hideError();
+    //
+    //     const filterId = isFirstFetch ? "?id_gte=100" : "?id_lte=200";
+    //     const limit = "&_limit=5";
+    //     isFirstFetch = !isFirstFetch;
+    //
+    //     try {
+    //         const response = await fetch(`${apiUrl}${filterId}${limit}`);
+    //         console.log("111")
+    //         if (!response.ok) throw new Error("Ошибка сети");
+    //         const comments = await response.json();
+    //         hidePreloader();
+    //         displayComments(comments);
+    //     } catch (error) {
+    //         console.error("Ошибка загрузки комментариев:", error);
+    //         hidePreloader();
+    //         showError();
+    //     }
+    // };
+    const fetchComments = () => {
         showPreloader();
         hideError();
 
         const filterId = isFirstFetch ? "?id_gte=100" : "?id_lte=200";
-        const limit = "&_limit=5"; // Ограничить количество комментариев до 5
+        const limit = "&_limit=5";
         isFirstFetch = !isFirstFetch;
 
-        try {
-            const response = await fetch(`${apiUrl}${filterId}${limit}`);
-            if (!response.ok) throw new Error("Ошибка сети");
-            const comments = await response.json();
-            hidePreloader();
-            displayComments(comments);
-        } catch (error) {
-            console.error("Ошибка загрузки комментариев:", error);
-            hidePreloader();
-            showError();
-        }
+        fetch(`${apiUrl}${filterId}${limit}`)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Ошибка сети");
+                }
+                return response.json();
+            })
+            .then((comments) => {
+                hidePreloader();
+                displayComments(comments);
+            })
+            .catch((error) => {
+                console.error("Ошибка загрузки комментариев:", error);
+                hidePreloader();
+                showError();
+            });
+        // console.log('111')
     };
 
     fetchComments();
+    // console.log("222")
 });
