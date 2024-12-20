@@ -1,21 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const dateElement = document.createElement('div');
-    dateElement.id = 'current-date';
-    dateElement.style.textAlign = 'center';
-    dateElement.style.marginTop = '10px';
-    dateElement.style.marginBottom = '20px';
-    document.body.appendChild(dateElement);
-
-    function updateDateTime() {
-        const now = new Date();
-        const day = String(now.getDate()).padStart(2, '0');
-        const month = String(now.getMonth() + 1).padStart(2, '0');
-        const year = now.getFullYear();
-        const hours = String(now.getHours()).padStart(2, '0');
-        const minutes = String(now.getMinutes()).padStart(2, '0');
-        dateElement.innerHTML = `Today: ${day}.${month}.${year}<br>Time: ${hours}:${minutes}`;
-    }
-
-    updateDateTime();
-    setInterval(updateDateTime, 1000);
+$(document).ready(function () {
+    // Инициализация слайдера для блока с акциями.
+    // Конфигурация библиотеки Slick для элемента '.promotion__list':
+    $('.promotion__list').slick({
+        autoplay: true,            // Автопрокрутка
+        autoplaySpeed: 2000,       // Скорость смены (в миллисекундах)
+        dots: true,                // Навигационные точки
+        arrows: false,             // Скрыть стрелки
+        infinite: true,            // Бесконечная прокрутка
+        slidesToShow: 2,           // Количество отображаемых слайдов
+        slidesToScroll: 1          // Количество прокручиваемых слайдов
+    });
 });

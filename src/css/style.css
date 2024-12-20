@@ -159,6 +159,7 @@
     margin: 0;
     list-style: none;
 }
+
 .promotion__item {
     flex: 0 1 calc(33.33% - 20px);
     box-sizing: border-box;
@@ -180,7 +181,7 @@
     color: #007BFF;
 }
 .promotion__text {
-    margin-top: 10px;
+    margin-top: 20px;
     display: block;
 }
 .navigation__list {
@@ -279,4 +280,19 @@
     margin-top: 10px;
     line-height: 2.5;
     text-align: center;
+}
+
+.promotion__list .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+.slick-dots li button::before {
+    color: darkmagenta;
+}
+
+.slick-dots li.slick-active button::before {
+    color: blue;
 }
